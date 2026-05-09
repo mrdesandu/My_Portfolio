@@ -19,7 +19,7 @@ export function SectionHero() {
           >
             {profile.name}
           </h1>
-          <p className="mt-6 text-xs leading-relaxed text-muted-foreground break-words">
+          <p className="mt-6 text-[0.65rem] sm:text-xs leading-relaxed text-muted-foreground break-words">
             BSc (Hons) in Computer Science · NSBM Green University &amp; University of Plymouth
           </p>
         </div>
