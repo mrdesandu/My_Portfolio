@@ -1,4 +1,5 @@
 import { profile, about } from "@/lib/portfolio-data"
+import Image from "next/image"
 
 export function SectionHero() {
   return (
@@ -7,21 +8,35 @@ export function SectionHero() {
       aria-labelledby="profile-heading"
       className="scroll-mt-24 pt-28 pb-20 lg:pt-36 lg:pb-28"
     >
-      <div className="flex flex-col items-center text-center">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-          Computer Science Portfolio
-        </p>
-        <h1
-          id="profile-heading"
-          className="text-balance text-4xl font-bold tracking-tight text-foreground md:text-6xl"
-        >
-          {profile.name}
-        </h1>
-        <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-          BSc (Hons) in Computer Science · NSBM Green University &amp; University of Plymouth
-        </p>
-
-
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
+        <div className="flex-1 lg:text-left text-center">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+            Computer Science Portfolio
+          </p>
+          <h1
+            id="profile-heading"
+            className="text-balance text-5xl lg:text-7xl font-bold tracking-tight text-foreground leading-tight"
+          >
+            {profile.name}
+          </h1>
+          <p className="mt-6 text-xs leading-relaxed text-muted-foreground whitespace-nowrap">
+            BSc (Hons) in Computer Science · NSBM Green University &amp; University of Plymouth
+          </p>
+        </div>
+        
+        <div className="flex-1 flex justify-center lg:justify-end">
+          <div className="relative w-72 h-96 group cursor-pointer">
+            <div className="absolute -inset-4 bg-primary/30 rounded-2xl transform -rotate-2 blur-sm transition-all duration-300 group-hover:scale-110"></div>
+            <div className="absolute inset-0 bg-primary rounded-xl transform rotate-3 transition-all duration-300 group-hover:scale-110" style={{ width: "85%", height: "90%", right: 0, top: 0 }}></div>
+            <Image
+              src="/E87A4330.jpg"
+              alt={profile.name}
+              fill
+              className="object-cover rounded-lg relative z-10 transition-all duration-300 group-hover:scale-110"
+              priority
+            />
+          </div>
+        </div>
       </div>
 
       <div className="mx-auto mt-16 max-w-3xl">

@@ -31,7 +31,7 @@ export function TimelineCard({
         aria-hidden="true"
         className="absolute -left-[26px] top-6 h-4 w-4 rounded-full border-2 border-primary bg-background md:-left-[30px]"
       />
-      <article className="rounded-xl border border-border bg-card/40 p-5 shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset] transition-all hover:border-primary/40 hover:bg-card/70 md:p-6">
+      <article className="rounded-xl border border-border bg-card/40 p-5 shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset] transition-all hover:border-primary/40 hover:bg-card/70 hover:scale-105 hover:shadow-lg md:p-6">
         <h3 className="text-lg font-bold tracking-tight text-foreground md:text-xl">{title}</h3>
         {subtitle ? (
           <p className="mt-1.5 text-sm font-medium text-primary md:text-base">{subtitle}</p>

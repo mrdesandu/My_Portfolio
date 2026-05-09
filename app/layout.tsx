@@ -3,6 +3,8 @@ import { Inter, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import ScrollToTop from "@/components/ScrollToTop"
+import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,11 +39,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${geistMono.variable} bg-background`}>
+    <html lang="en" className={`${inter.variable} ${geistMono.variable} bg-background`} suppressHydrationWarning>
       <body className="font-sans antialiased">
-        {children}
-        {process.env.NODE_ENV === "production" && <Analytics />}
-        <ScrollToTop />
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          {children}
+          {process.env.NODE_ENV === "production" && <Analytics />}
+          <ScrollToTop />
+          <ThemeToggle />
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -19,7 +19,7 @@ function ProjectCard({ p }: { p: Project }) {
       href={p.link}
       target="_blank"
       rel="noreferrer"
-      className="group flex h-full flex-col rounded-xl border border-border bg-card/40 p-5 transition-all hover:border-primary/40 hover:bg-card/70 md:p-6"
+      className="group flex h-full flex-col rounded-xl border border-border bg-card/40 p-5 transition-all hover:border-primary/40 hover:bg-card/70 hover:scale-105 hover:shadow-lg md:p-6"
     >
       <div className="flex items-start justify-between gap-3">
         <h4 className="text-lg font-bold tracking-tight text-foreground transition-colors group-hover:text-primary md:text-xl">

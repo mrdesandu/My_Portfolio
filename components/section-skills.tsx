@@ -13,7 +13,7 @@ export function SectionSkills() {
         {skillGroups.map((group) => (
           <div
             key={group.label}
-            className="rounded-xl border border-border bg-card/40 p-5 transition-colors hover:border-primary/40 md:p-6"
+            className="rounded-xl border border-border bg-card/40 p-5 transition-all hover:border-primary/40 hover:scale-105 hover:shadow-lg md:p-6"
           >
             <h3 className="mb-4 text-base font-bold text-foreground">{group.label}</h3>
             <ul className="flex flex-wrap gap-2">
