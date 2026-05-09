@@ -8,8 +8,8 @@ export function SectionHero() {
       aria-labelledby="profile-heading"
       className="scroll-mt-24 pt-28 pb-20 lg:pt-36 lg:pb-28"
     >
-      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-16 lg:gap-24 w-full">
-        <div className="lg:flex-1 text-center">
+      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-16 lg:gap-24 w-full px-6">
+        <div className="w-full lg:flex-1 text-center">
           <p className="mb-6 text-xs font-semibold uppercase tracking-[0.3em] text-primary">
             Computer Science Portfolio
           </p>
@@ -19,7 +19,7 @@ export function SectionHero() {
           >
             {profile.name}
           </h1>
-          <p className="mt-6 text-xs leading-relaxed text-muted-foreground whitespace-nowrap">
+          <p className="mt-6 text-xs leading-relaxed text-muted-foreground whitespace-nowrap justify-center flex">
             BSc (Hons) in Computer Science · NSBM Green University &amp; University of Plymouth
           </p>
         </div>
