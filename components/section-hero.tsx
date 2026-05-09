@@ -8,8 +8,8 @@ export function SectionHero() {
       aria-labelledby="profile-heading"
       className="scroll-mt-24 pt-28 pb-20 lg:pt-36 lg:pb-28"
     >
-      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-16 lg:gap-24">
-        <div className="flex-1 text-center">
+      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-16 lg:gap-24 w-full">
+        <div className="lg:flex-1 text-center">
           <p className="mb-6 text-xs font-semibold uppercase tracking-[0.3em] text-primary">
             Computer Science Portfolio
           </p>
@@ -24,7 +24,7 @@ export function SectionHero() {
           </p>
         </div>
         
-        <div className="flex-1 flex justify-center">
+        <div className="lg:flex-1 flex justify-center w-full lg:w-auto">
           <div className="relative w-72 h-96 group cursor-pointer">
             <div className="absolute -inset-4 bg-primary/30 rounded-2xl transform -rotate-2 blur-sm transition-all duration-300 group-hover:scale-110"></div>
             <div className="absolute inset-0 bg-primary rounded-xl transform rotate-3 transition-all duration-300 group-hover:scale-110" style={{ width: "85%", height: "90%", right: 0, top: 0 }}></div>
