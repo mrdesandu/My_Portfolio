@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
+import { useLoading } from "@/components/loading-context"
 
 const navLinks = [
   { id: "profile", label: "Profile" },
@@ -16,6 +17,7 @@ const navLinks = [
 export function TopNav() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { isLoading } = useLoading()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -23,6 +25,8 @@ export function TopNav() {
     window.addEventListener("scroll", onScroll, { passive: true })
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
+
+  if (isLoading) return null
 
   return (
     <header
