@@ -5,6 +5,7 @@ import "./globals.css"
 import ScrollToTop from "@/components/ScrollToTop"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { PageLoader } from "@/components/page-loader"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${geistMono.variable} bg-background`} suppressHydrationWarning>
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <PageLoader />
           {children}
           {process.env.NODE_ENV === "production" && <Analytics />}
           <ScrollToTop />
