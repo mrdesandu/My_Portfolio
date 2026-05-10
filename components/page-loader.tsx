@@ -56,7 +56,7 @@ export function PageLoader() {
         .loader-name-char {
           font-family: var(--font-inter), system-ui, sans-serif;
           font-weight: 700;
-          font-size: clamp(2rem, 6vw, 3.5rem);
+          font-size: clamp(1.5rem, 4.5vw, 2.5rem);
           line-height: 1;
           color: hsl(var(--foreground));
           display: inline-block;
